@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .slider {
+        position: relative;
+        height: 100vh; /* Changed to 100vh */
+        width: 90vw;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        height: 100vh; /* Changed to 100vh */
+        position: relative;
+        background-color: black; /* Set background color to black */
+      }
+
+      .slide img {
+        width: 100%; /* Full width of the slide */
+        height: 100%; /* Full height of the slide */
+        object-fit: cover; /* Cover the entire slide area */
+        position: absolute; /* Position it absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+      }
+
+      .text {
+        position: absolute;
+        bottom: 30%; /* Position at the bottom for larger screens */
+        left: 50%;
+        transform: translate(-50%, 50%); /* Center horizontally */
+        text-align: center;
+        color: white;
+      }
+
+      /* Center text for mobile screens */
+      @media (max-width: 600px) {
+        .text {
+          top: 50%; /* Center vertically */
+          bottom: auto; /* Remove bottom positioning */
+          transform: translate(-50%, -50%); /* Center horizontally */
+        }
+      }
+
+      .heading {
+        font-size: 7vw;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideUp 0.5s forwards;
+      }
+
+      .text p {
+        font-size: 2vw; /* Responsive font size */
+        max-width: 90%; /* Ensures it doesn't overflow */
+        margin: 10px auto 0; /* Centering */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .pagination {
+        position: absolute;
+        bottom: 5%; /* Adjusted for better positioning */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .dot {
+        height: 10px; /* Smaller dot size */
+        width: 10px; /* Smaller dot size */
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .dot.active {
+        background-color: #717171;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .heading {
+          font-size: 8vw; /* Adjust size for smaller screens */
+        }
+        .text p {
+          font-size: 4.5vw; /* Adjust paragraph size for smaller screens */
+        }
+        .dot {
+          height: 8px; /* Smaller dot size for mobile */
+          width: 8px; /* Smaller dot size for mobile */
+        }
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar2 p-4">
+      <ul class="text-center">
+        <li class="nav-item p-1">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item p-1">
+          <a class="nav-link" href="discography.html"> Discography</a>
+        </li>
+
+        <li class="nav-item p-1">
+          <a class="nav-link" href="media.html"> Media</a>
+        </li>
+
+        <li class="nav-item p-1">
+          <a class="nav-link" href="mailto:raunakchakraborty445@gmail.com">
+            Chat</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <center>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.31.04 PM.png"
+                style="object-position: 10% 10%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.31.44 PM.png"
+                alt="Image 2"
+                style="object-position: 10% 10%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.31.26 PM.png"
+                alt="Image 3"
+                style="object-position: 70% 20%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.30.15 PM.png"
+                alt="Image 4"
+                style="object-position: 70% 40%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.30.42 PM.png"
+                alt="Image 5"
+                style="object-position: 30% 40%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="" class="slide-link">
+              <img
+                src="Screenshot 2024-09-30 8.31.08 PM.png"
+                alt="Image 6"
+                style="object-position: 30% 40%"
+              />
+              <div class="text">
+                <h2 class="heading">Raunak C.</h2>
+                <p>GUITAR!</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="pagination">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+      </div>
+    </center>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Automatically change slides every 3 seconds
+      setInterval(() => {
+        showSlides((slideIndex += 1));
+      }, 3000);
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <div class="story">
+      <header id="headercool">RAUNAK CHAKRABORTY</header>
+      <h5 id="baka">
+        Raunak Chakraborty is a guitarist from Bay Area. He had started his
+        journey three years ago and has built his way up so far. He has played
+        guitar with many different bands and people across the bay area
+        including his band, Udaan which is a bengali band that does rock, folk,
+        and classical music. He has many shows across the bay area and everyone
+        knows him as Electriying Figo. He plays guitar on many different varying
+        genres although his main genre is hard rock. He has met many people in
+        the industry and he met and seen professional bands. He is also a
+        professional music artist releasing music on streaming platforms. He
+        released his first single dreamland back in May and he also composes
+        music a lot. He's pretty popular in the Bay Area and is trying to make
+        guitar his profession.
+      </h5>
+    </div>
+  </body>
+</html>

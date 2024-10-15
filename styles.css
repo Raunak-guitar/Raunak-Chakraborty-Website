@@ -1,0 +1,367 @@
+.nav-item {
+  margin-left: 2vw;
+}
+
+body {
+  background-image: url("Pic3.png");
+
+  background-size: cover;
+  background-position: top;
+}
+
+.home {
+  height: 100vh;
+
+  position: relative;
+}
+.spotify-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: yellow;
+  border: 1px solid yellow;
+  padding: 10px;
+  margin-right: 2vw;
+}
+.home-content {
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  text-align: center;
+}
+.raunak {
+  color: white;
+  font-size: 5vw;
+  font-family: "Ubuntu", sans-serif;
+}
+#p1 {
+  color: white;
+  font-style: bold;
+  font-family: cursive;
+}
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-item {
+  display: inline-block;
+}
+.divawesome {
+  text-align: center;
+  padding: 20px;
+}
+.divawesome a {
+  display: inline-block;
+  padding: 25px;
+}
+.vids {
+  text-align: center;
+}
+#baka {
+  color: whitesmoke;
+  font-style: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.mobile-pagination-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+div.pagination-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+div#testimonial-slider.slider-container {
+  margin: 10px 10px;
+}
+
+div#testimonial-slider.slider-container {
+  width: 100vw;
+}
+
+img.testimonial-image-small {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+h5.testimonial-author {
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin: 0;
+  align-self: flex-end;
+  margin-top: 20px;
+
+  width: 250px;
+}
+
+.client-diary-body {
+  font-family: "Georgia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.client-diary-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5rem;
+  margin-top: 0;
+  font-family: "Georgia", serif;
+}
+
+.slider-container {
+  position: relative;
+  width: 85%;
+  height: 450px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.testimonial-item {
+  flex: 0 0 20%;
+  height: 60%;
+  opacity: 0.7;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeScale 0.5s ease forwards;
+}
+
+.testimonial-item.active {
+  flex: 0 0 40%;
+  height: 250%;
+  opacity: 1;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px;
+}
+
+.testimonial-image-small {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.testimonial-item.active .testimonial-image-small {
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin: 0;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.testimonial-content {
+  display: none;
+}
+
+.testimonial-item.active .testimonial-content {
+  display: block;
+  text-align: left;
+}
+
+.testimonial-heading {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.testimonial-description {
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+
+.pagination-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-dotx {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #333;
+}
+
+/* Mobile Styles */
+.mobile-slider-container {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.mobile-testimonial-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.mobile-testimonial-item {
+  min-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.mobile-testimonial-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.mobile-testimonial-author {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.mobile-pagination {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.mobile-pagination-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-pagination-dot.active {
+  background-color: #333;
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktop-slider-container {
+    display: none;
+  }
+  .mobile-slider-container {
+    display: block;
+  }
+  .client-diary-body {
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-slider-container {
+    margin: 10px auto;
+  }
+  .mobile-testimonial-item {
+    padding: 20px;
+  }
+  .mobile-testimonial-image {
+    width: 100%;
+    height: auto;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.element {
+  animation: fade-in 2s ease-in-out;
+}
+
+#headercool {
+  color: white;
+  font-family:Segoe UI", Tahoma, Geneva, Verdana, sans-serif ;
+  text-align: center;
+}
